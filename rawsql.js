@@ -8,6 +8,7 @@ const con = mysql.createConnection({
   password: 'root',
   database: 'movie',
 });
+
 function getConnected() {
   return new Promise((resolve, reject) => {
     console.log('connected');
@@ -61,8 +62,8 @@ function createDirectorTable() {
   return new Promise((resolve, reject) => {
     console.log('create director table');
     const directortable = `CREATE TABLE if NOT EXISTS table_director(
-      director INT PRIMARY KEY AUTO_INCREMENT,
-      directorname VARCHAR(20) 
+      dirid INT PRIMARY KEY AUTO_INCREMENT,
+      dirname VARCHAR(20) 
       )`;
     con.query(directortable, (error, table) => {
       if (error) {
@@ -77,18 +78,20 @@ function createMovieTable() {
   return new Promise((resolve, reject) => {
     console.log('create movie table');
     const movietable = `CREATE TABLE if NOT EXISTS table_movie(
-    rank INT PRIMARY KEY,
+    movid INT PRIMARY KEY AUTO_INCREMENT,
+    rank INT ,
     title VARCHAR(49) ,
-    description VARCHAR(246) ,
+    description LONGTEXT ,
     runtime INT ,
     genre VARCHAR(9) ,
     rating FLOAT ,
     metascore INT ,
     votes INT ,
     gross_earning_in_mil FLOAT ,
-    director VARCHAR(21) ,
+    dirid INT ,
     actor VARCHAR(21) ,
-    year INT
+    year INT,
+    FOREIGN KEY (dirid) REFERENCES table_director(dirid)
     )`;
     con.query(movietable, (error, table) => {
       if (error) {
@@ -107,7 +110,7 @@ function insertDirectorData(moviesjson) {
     moviesjson.forEach((data) => {
       if (!directorname.includes(data.Director)) {
         directorname.push(data.Director);
-        con.query(`INSERT INTO table_director (directorname) VALUES ('${data.Director}') `, (error, tb) => {
+        con.query(`INSERT INTO table_director (dirname) VALUES ('${data.Director}') `, (error, tb) => {
           if (error) {
             reject(error);
           }
@@ -122,13 +125,20 @@ function insertMovieData(moviesjson) {
   return new Promise((resolve, reject) => {
     console.log('movie insert');
     moviesjson.forEach((data) => {
-      const name = data.Director;
-      con.query('INSERT INTO table_movie SET ?', data);
-      con.query('UPDATE table_movie as m SET m.director = ( SELECT d.director FROM table_director as d WHERE d.directorname = ? ) WHERE m.rank= ?', [name, data.Rank], (error, row) => {
+      con.query(`SELECT dirid FROM table_director WHERE dirname = '${data.Director}'`, (error, row) => {
         if (error) {
-          reject(error);
+          throw error;
+        } else {
+          // eslint-disable-next-line max-len
+          console.log(row);
+          con.query(`INSERT INTO table_movie (rank, title, description, runtime, genre, rating, metascore, votes, gross_earning_in_mil, dirid, actor, year) VALUES (${data.Rank}, "${data.Title}", "${data.Description}", ${data.Runtime}, '${data.Genre}', ${data.Rating}, ${data.Metascore}, ${data.Votes}, ${data.Gross_Earning_in_Mil}, ${row[0].dirid}, '${data.Actor}', ${data.Year})`, (e, r) => {
+            if (e) {
+              console.log(e);
+              reject(e);
+            }
+            resolve(r);
+          });
         }
-        resolve(row);
       });
     });
   });
@@ -140,7 +150,7 @@ function insertDirector(name) {
   // eslint-disable-next-line max-len
   return new Promise((resolve, reject) => {
     console.log('insert director');
-    con.query(`INSERT INTO table_director (directorname) VALUES ('${name}')`, (error, row) => {
+    con.query(`INSERT INTO table_director (dirname) VALUES ('${name}')`, (error, row) => {
       if (error) {
         reject(error);
       }
@@ -152,7 +162,7 @@ function insertDirector(name) {
 function deleteDirector(id) {
   return new Promise((resolve, reject) => {
     console.log('delete director');
-    con.query(`DELETE FROM table_director WHERE director = ${id}`, (error, row) => {
+    con.query(`DELETE FROM table_director WHERE dirid = ${id}`, (error, row) => {
       if (error) {
         reject(error);
       }
@@ -164,7 +174,7 @@ function deleteDirector(id) {
 function updateDirector(director, dirid) {
   return new Promise((resolve, reject) => {
     console.log('update director');
-    con.query('UPDATE table_director SET directorname = ? WHERE director = ?', [director, dirid], (error, row) => {
+    con.query('UPDATE table_director SET dirname = ? WHERE dirid = ?', [director, dirid], (error, row) => {
       if (error) {
         reject(error);
       }
@@ -176,7 +186,7 @@ function updateDirector(director, dirid) {
 function getDirector(id) {
   return new Promise((resolve, reject) => {
     console.log('fetch director');
-    con.query('SELECT directorname FROM table_director WHERE director = ?', [id], (error, row) => {
+    con.query('SELECT dirname FROM table_director WHERE dirid = ?', [id], (error, row) => {
       if (error) {
         reject(error);
       }
@@ -188,7 +198,7 @@ function getDirector(id) {
 function getAllDirector() {
   return new Promise((resolve, reject) => {
     console.log('fetch all directors');
-    con.query('SELECT directorname FROM table_director', (error, row) => {
+    con.query('SELECT dirname FROM table_director', (error, row) => {
       if (error) {
         reject(error);
       }
@@ -199,7 +209,7 @@ function getAllDirector() {
 
 /** ****************************CRUD MOVIE*******************8 */
 // eslint-disable-next-line max-len
-function insertMovie(rank, title, description, runtime, genre, rating, metascore, votes, gross_earning_in_mil, director, actor, year) {
+function insertMovie(rank, title, description, runtime, genre, rating, metascore, votes, gross_earning_in_mil, dirid, actor, year) {
   // eslint-disable-next-line max-len
   return new Promise((resolve, reject) => {
     console.log('insert movie');
@@ -213,7 +223,7 @@ function insertMovie(rank, title, description, runtime, genre, rating, metascore
       metascore,
       votes,
       gross_earning_in_mil,
-      director,
+      dirid,
       actor,
       year,
     };
@@ -227,10 +237,10 @@ function insertMovie(rank, title, description, runtime, genre, rating, metascore
 }
 
 
-function getMovie(rank) {
+function getMovie(id) {
   return new Promise((resolve, reject) => {
     console.log('fetch movie');
-    con.query('SELECT title FROM table_movie WHERE rank = ?', [rank], (error, row) => {
+    con.query('SELECT title FROM table_movie WHERE movid = ?', [id], (error, row) => {
       if (error) {
         reject(error);
       }
@@ -251,10 +261,10 @@ function getAllMovie() {
   });
 }
 
-function deleteMovie(rank) {
+function deleteMovie(id) {
   return new Promise((resolve, reject) => {
     console.log('delete movies');
-    con.query(`DELETE FROM table_movie WHERE rank = ${rank}`, (error, row) => {
+    con.query(`DELETE FROM table_movie WHERE movid = ${id}`, (error, row) => {
       if (error) {
         return reject(error);
       }
@@ -264,10 +274,10 @@ function deleteMovie(rank) {
 }
 
 
-function updateMovie(rating, gross_earning_in_mil, votes, rank) {
+function updateMovie(rating, gross_earning_in_mil, votes, id) {
   return new Promise((resolve, reject) => {
     console.log('update movie');
-    con.query('UPDATE table_movie SET rating = ?, gross_earning_in_mil = ?, votes = ? WHERE rank = ?', [rating, gross_earning_in_mil, votes, rank], (error, row) => {
+    con.query('UPDATE table_movie SET rating = ?, gross_earning_in_mil = ?, votes = ? WHERE movid = ?', [rating, gross_earning_in_mil, votes, id], (error, row) => {
       if (error) {
         reject(error);
       }
@@ -285,20 +295,25 @@ getConnected().then(() => dropMovieTable())
   .then(() => createMovieTable())
   .then(() => insertDirectorData(movies))
   .then(() => insertMovieData(movies))
-  .then(() => {
-    insertDirector('madhu');
-    insertDirector('madhupriya');
-    insertMovie(51, 'Harry Potter', 'Harry Potter is a British-American film series based on the eponymous novels by author J. K. Rowling.', 161, 'Witchy', 8.6, 2, 90612, 12.39, '5', 'Daniel', 2002);
-    deleteDirector(1);
-    deleteMovie(1);
-    updateMovie(0, 0, 0, 52);
-    updateDirector('madhupriya', 1);
-    getMovie(2).then(data => console.log(data));
-    getDirector(2).then(data => console.log(data));
-    getAllMovie().then(data => console.log(data));
-    getAllDirector().then(data => console.log(data));
-  })
-  .catch(err => setImmediate(() => { throw err; }));
+  .then(() => insertDirector('ABCD'))
+  .then(() => insertDirector('abc'))
+  .then(() => insertMovie(51, 'Harry Potter', 'Harry Potter is a British-American film series based on the eponymous novels by author J. K. Rowling.', 161, 'Witchy', 8.6, 2, 90612, 12.39, 5, 'Daniel', 2002))
+  .then(() => deleteMovie(49))
+  .then(() => deleteMovie(2))
+  .then(() => deleteDirector(34))
+  .then(() => updateMovie(0, 0, 0, 3))
+  .then(() => updateDirector('abc', 2))
+  .then(() => getMovie(2))
+  .then(data => console.log(data))
+  .then(() => getDirector(2))
+  .then(data => console.log(data))
+  .then(() => getAllMovie())
+  .then(data => console.log(data))
+  .then(() => getAllDirector())
+  .then(data => console.log(data))
+  .catch(err => setImmediate(() => {
+    throw err;
+  }));
 
 // // eslint-disable-next-line max-len
 // async function crudSql() {
