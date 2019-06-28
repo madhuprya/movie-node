@@ -91,7 +91,7 @@ function insertDirectorData(moviesjson) {
 
 function insertMovieData(moviesjson) {
   console.log('movie insert');
-  const promises = moviesjson.forEach(data => new Promise((resolve, reject) => {
+  const promises = moviesjson.map(data => new Promise((resolve, reject) => {
     con.query(`SELECT dirid FROM table_director WHERE dirname = '${data.Director}'`, (error, row) => {
       if (error) {
         throw error;
