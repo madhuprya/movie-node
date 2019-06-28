@@ -22,7 +22,7 @@ const pschema = Joi.object().keys({
 
   rating: Joi.number().min(0).max(100).required(),
   metascore: Joi.number().min(0).max(100000).required(),
-  votes: Joi.number().min(0).max(100000).required(),
+  votes: Joi.number().min(0).max(10000000).required(),
   gross_earning_in_mil: Joi.number().min(0).max(10000).required(),
   dirid: Joi.number().min(0).max(100).required(),
   actor: Joi.string().min(3).max(30)
@@ -99,13 +99,19 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   Joi.validate(req.params, schema, (err, value) => {
     if (!err) {
-      movieCrud.updateMovie(req.body, value.id)
-        .then((resolve) => {
-          res.json(resolve);
-        })
-        .catch((reject) => {
-          res.json(reject);
-        });
+      Joi.validate(req.body, pschema, (error, data) => {
+        if (!error) {
+          movieCrud.updateMovie(data, value.id)
+            .then((resolve) => {
+              res.json(resolve);
+            })
+            .catch((reject) => {
+              res.json(reject);
+            });
+        } else {
+          res.json(err);
+        }
+      });
     } else {
       res.json(err);
     }

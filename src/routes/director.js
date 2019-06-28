@@ -85,13 +85,19 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
   Joi.validate(req.params, schema, (err, value) => {
     if (!err) {
-      directorCrud.updateDirector(req.body, value.id)
-        .then((resolve) => {
-          res.json(resolve);
-        })
-        .catch((reject) => {
-          res.json(reject);
-        });
+      Joi.validate(req.body, pschema, (error, data) => {
+        if (!error) {
+          directorCrud.updateDirector(data, value.id)
+            .then((resolve) => {
+              res.json(resolve);
+            })
+            .catch((reject) => {
+              res.json(reject);
+            });
+        } else {
+          res.json(err);
+        }
+      });
     } else {
       res.json(err);
     }
