@@ -1,6 +1,6 @@
-const con = require('../database');
+const con = require('../utils/database');
 
-const movies = require('../movies.json');
+const movies = require('../../movies.json');
 
 const directorTable = `CREATE TABLE if NOT EXISTS table_director(
   dirid INT PRIMARY KEY AUTO_INCREMENT,

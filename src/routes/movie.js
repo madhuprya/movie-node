@@ -9,17 +9,16 @@ const router = express.Router();
 const schema = Joi.object().keys({
   id: Joi.number().min(0).max(50).required(),
 });
+
 const pschema = Joi.object().keys({
   rank: Joi.number().min(0).max(100).required(),
   title: Joi.string().min(3).max(30)
     .required(),
   description: Joi.string().min(3).max(1000)
     .required(),
-
   runtime: Joi.number().min(0).max(10000).required(),
   genre: Joi.string().min(3).max(30)
     .required(),
-
   rating: Joi.number().min(0).max(100).required(),
   metascore: Joi.number().min(0).max(100000).required(),
   votes: Joi.number().min(0).max(10000000).required(),
