@@ -1,23 +1,24 @@
 
 const express = require('express');
 
-const Joi = require('@hapi/joi');
-
 const router = express.Router();
 const directorCrud = require('../models/director');
+const joi = require('../middleware/joi');
 
 
-const schema = Joi.object().keys({
-  id: Joi.number().min(0).max(50).required(),
-});
-const pschema = Joi.object().keys({
-  dirname: Joi.string().min(3).max(30)
-    .required(),
-});
+// middleware
+router.get('/error', (req, res, next) => next(new Error('This is an error and it should be logged to the console')));
+// const requireJsonContent = () => (req, res, next) => {
+//   if (req.headers['content-type'] !== 'application/json') {
+//     res.status(400).send('Server requires application/json');
+//   } else {
+//     next();
+//   }
+// };
 // rest api to get director by id
 
-router.get('/:id', (req, res) => {
-  Joi.validate(req.params, schema, (err, value) => {
+router.get('/:id', (req, res, next) => {
+  joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
       directorCrud.getDirector(value.id)
         .then((resolve) => {
@@ -47,7 +48,7 @@ router.get('/', (req, res) => {
 // rest api to create a new director record into mysql database
 
 router.post('/', (req, res) => {
-  Joi.validate(req.body, pschema, (err, value) => {
+  joi.Joi.validate(req.body, joi.dschema, (err, value) => {
     if (!err) {
       directorCrud.insertDirector(value)
         .then((resolve) => {
@@ -65,7 +66,7 @@ router.post('/', (req, res) => {
 // rest api to delete record from mysql database
 
 router.delete('/:id', (req, res) => {
-  Joi.validate(req.params, schema, (err, value) => {
+  joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
       directorCrud.deleteDirector(value.id)
         .then((resolve) => {
@@ -80,12 +81,13 @@ router.delete('/:id', (req, res) => {
   });
 });
 
+
 // rest api to update record into mysql database
 
-router.put('/:id', (req, res) => {
-  Joi.validate(req.params, schema, (err, value) => {
+router.put('/:id', (req, res, next) => {
+  joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
-      Joi.validate(req.body, pschema, (error, data) => {
+      joi.Joi.validate(req.body, joi.dschema, (error, data) => {
         if (!error) {
           directorCrud.updateDirector(data, value.id)
             .then((resolve) => {

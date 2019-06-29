@@ -6,3 +6,129 @@
 {"message":"Server running at port 3000","level":"info"}
 {"message":"Server running at port 3000","level":"info"}
 {"message":"movie inserted","level":"info"}
+[2019-06-29T05:04:06.141Z] info Server running at port 3000
+[2019-06-29T05:04:32.717Z] info movie inserted
+[2019-06-29T05:05:25.936Z] info Server running at port 3000
+[2019-06-29T05:05:30.095Z] info Server running at port 3000
+[2019-06-29T05:05:33.436Z] info Server running at port 3000
+[2019-06-29T05:05:48.771Z] info Server running at port 3000
+[2019-06-29T05:06:46.727Z] info Server running at port 3000
+[2019-06-29T05:06:52.555Z] info Server running at port 3000
+[2019-06-29T05:06:57.749Z] info Server running at port 3000
+[2019-06-29T05:07:06.308Z] info Server running at port 3000
+[2019-06-29T05:07:32.673Z] info Server running at port 3000
+[2019-06-29T05:09:23.534Z] info Server running at port 3000
+[2019-06-29T05:09:29.954Z] info Server running at port 3000
+[2019-06-29T05:09:43.470Z] info Server running at port 3000
+[2019-06-29T05:09:49.755Z] info Server running at port 3000
+[2019-06-29T05:11:11.106Z] info Server running at port 3000
+[2019-06-29T05:15:05.062Z] info Server running at port 3000
+[2019-06-29T05:15:14.422Z] info Server running at port 3000
+[2019-06-29T06:16:22.512Z] info Server running at port 3000
+[2019-06-29T06:17:01.192Z] info Request ip
+[2019-06-29T06:19:49.208Z] info Server running at port 3000
+[2019-06-29T06:20:12.812Z] info Server running at port 3000
+[2019-06-29T06:20:18.961Z] info Request ip
+[2019-06-29T06:20:33.733Z] info Request ip
+[2019-06-29T06:20:58.849Z] info Request ip
+[2019-06-29T06:21:45.756Z] info Server running at port 3000
+[2019-06-29T06:21:58.523Z] info Request ip
+[2019-06-29T06:21:58.558Z] info movie notinserted
+[2019-06-29T06:21:58.562Z] info ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FrROM table_movie WHERE movid = 3' at line 1
+[2019-06-29T06:22:37.819Z] info Server running at port 3000
+[2019-06-29T06:25:27.525Z] info Server running at port 3000
+[2019-06-29T06:26:07.957Z] info Server running at port 3000
+[2019-06-29T06:26:49.367Z] info Server running at port 3000
+[2019-06-29T06:26:53.777Z] info Request ip
+[2019-06-29T06:26:57.596Z] info Request ip
+[2019-06-29T06:27:07.179Z] info Request ip
+[2019-06-29T06:31:34.908Z] info Server running at port 3000
+[2019-06-29T06:31:40.632Z] info Request ip
+[2019-06-29T06:31:52.000Z] info Request ip
+[2019-06-29T06:43:03.213Z] info Server running at port 3000
+[2019-06-29T06:43:11.870Z] info Server running at port 3000
+[2019-06-29T06:43:38.805Z] info Server running at port 3000
+[2019-06-29T06:44:06.566Z] info Server running at port 3000
+[2019-06-29T06:49:01.351Z] info Server running at port 3000
+[2019-06-29T06:49:08.404Z] info Server running at port 3000
+[2019-06-29T06:49:13.794Z] info Server running at port 3000
+[2019-06-29T06:49:16.208Z] info Server running at port 3000
+[2019-06-29T06:49:21.096Z] info Server running at port 3000
+[2019-06-29T06:53:08.649Z] info Server running at port 3000
+[2019-06-29T06:53:18.799Z] info Server running at port 3000
+[2019-06-29T06:53:31.515Z] info Server running at port 3000
+[2019-06-29T06:54:03.061Z] info Server running at port 3000
+[2019-06-29T06:54:11.064Z] info Server running at port 3000
+[2019-06-29T06:54:17.776Z] info Server running at port 3000
+[2019-06-29T06:54:20.779Z] info Server running at port 3000
+[2019-06-29T06:54:29.859Z] info Server running at port 3000
+[2019-06-29T06:55:06.635Z] info Server running at port 3000
+[2019-06-29T06:55:44.065Z] info Server running at port 3000
+[2019-06-29T06:56:03.331Z] info Server running at port 3000
+[2019-06-29T06:56:13.007Z] info Server running at port 3000
+[2019-06-29T06:56:18.164Z] info Server running at port 3000
+[2019-06-29T06:56:20.710Z] info Server running at port 3000
+[2019-06-29T06:58:27.502Z] info Server running at port 3000
+[2019-06-29T06:58:29.576Z] info Server running at port 3000
+[2019-06-29T06:58:46.595Z] info Server running at port 3000
+[2019-06-29T06:58:50.779Z] info Server running at port 3000
+[2019-06-29T06:59:12.933Z] info Server running at port 3000
+[2019-06-29T06:59:22.144Z] info Server running at port 3000
+[2019-06-29T06:59:27.347Z] info Server running at port 3000
+[2019-06-29T06:59:36.332Z] info Server running at port 3000
+[2019-06-29T08:50:28.697Z] info Server running at port 3000
+[2019-06-29T08:55:40.728Z] info Server running at port 3000
+[2019-06-29T08:55:46.086Z] info Request ip
+[2019-06-29T08:56:15.991Z] info Request ip
+[2019-06-29T08:56:45.136Z] info Server running at port 3000
+[2019-06-29T08:56:49.013Z] info Request ip
+[2019-06-29T08:56:50.213Z] info Request ip
+[2019-06-29T08:57:13.966Z] info Server running at port 3000
+[2019-06-29T08:57:25.120Z] info Server running at port 3000
+[2019-06-29T08:57:27.650Z] info Request ip
+[2019-06-29T08:57:28.950Z] info Request ip
+[2019-06-29T08:58:03.653Z] info Server running at port 3000
+[2019-06-29T08:58:05.987Z] info Server running at port 3000
+[2019-06-29T08:58:08.702Z] info Request ip
+[2019-06-29T08:58:49.148Z] info Server running at port 3000
+[2019-06-29T08:58:52.119Z] info Request ip
+[2019-06-29T08:58:52.151Z] info ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROMs table_director' at line 1
+[2019-06-29T08:59:22.807Z] info Server running at port 3000
+[2019-06-29T09:07:33.532Z] info Server running at port 3000
+[2019-06-29T09:07:41.192Z] info Server running at port 3000
+[2019-06-29T09:07:48.610Z] info Server running at port 3000
+[2019-06-29T09:07:51.945Z] info Server running at port 3000
+[2019-06-29T09:07:55.556Z] info Server running at port 3000
+[2019-06-29T09:08:00.401Z] info Server running at port 3000
+[2019-06-29T09:08:08.900Z] info Server running at port 3000
+[2019-06-29T09:08:22.607Z] info Server running at port 3000
+[2019-06-29T09:08:38.333Z] info Server running at port 3000
+[2019-06-29T09:08:43.075Z] info Server running at port 3000
+[2019-06-29T09:12:13.025Z] info Server running at port 3000
+[2019-06-29T09:36:22.784Z] info Server running at port 3000
+[2019-06-29T09:41:01.856Z] info Server running at port 3000
+[2019-06-29T09:41:05.791Z] info Server running at port 3000
+[2019-06-29T09:41:09.568Z] info Server running at port 3000
+[2019-06-29T09:44:42.878Z] info Server running at port 3000
+[2019-06-29T09:44:48.615Z] info Request ip
+[2019-06-29T09:44:48.642Z] info ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROMs table_director' at line 1
+[2019-06-29T09:45:43.886Z] info Server running at port 3000
+[2019-06-29T09:45:46.924Z] info Request ip
+[2019-06-29T09:45:47.033Z] info Request ip
+[2019-06-29T09:45:54.366Z] info Request ip
+[2019-06-29T09:45:59.664Z] info Request ip
+[2019-06-29T09:46:05.688Z] info Request ip
+[2019-06-29T09:46:34.740Z] info Server running at port 3000
+[2019-06-29T09:46:40.517Z] info Server running at port 3000
+[2019-06-29T09:46:50.401Z] info Server running at port 3000
+[2019-06-29T09:47:07.694Z] info Server running at port 3000
+[2019-06-29T09:47:10.113Z] info Request ip
+[2019-06-29T09:48:38.106Z] info Server running at port 3000
+[2019-06-29T09:48:46.858Z] info Server running at port 3000
+[2019-06-29T09:49:25.375Z] info Server running at port 3000
+[2019-06-29T09:49:27.605Z] info Server running at port 3000
+[2019-06-29T09:49:31.307Z] info Server running at port 3000
+[2019-06-29T09:49:34.502Z] info Request ip
+[2019-06-29T09:50:09.094Z] info Server running at port 3000
+[2019-06-29T09:50:26.387Z] info Server running at port 3000
+[2019-06-29T09:50:44.499Z] info Server running at port 3000

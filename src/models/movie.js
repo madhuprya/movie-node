@@ -4,59 +4,60 @@ const logger = require('../utils/logging');
 
 const movieCrud = {
 
-  insertMovie(values, cb) {
+  insertMovie(values) {
     return new Promise((resolve, reject) => {
       con.query('INSERT INTO table_movie SET ?', values, (error, row) => {
         if (error) {
-          reject(error);
+          reject(logger.info(error));
         }
         logger.info('movie inserted');
-        resolve(row, cb);
+        resolve(row);
       });
     });
   },
 
 
-  getMovie(id, cb) {
+  getMovie(id) {
     return new Promise((resolve, reject) => {
       con.query('SELECT * FROM table_movie WHERE movid = ?', [id], (error, row) => {
         if (error) {
-          reject(error);
+          logger.info('movie notinserted');
+          reject(logger.info(error));
         }
-        resolve(row, cb);
+        resolve(row);
       });
     });
   },
 
-  getAllMovie(cb) {
+  getAllMovie() {
     return new Promise((resolve, reject) => {
       con.query('SELECT * FROM table_movie', (error, row) => {
         if (error) {
-          reject(error);
+          reject(logger.info(error));
         }
-        resolve(row, cb);
+        resolve(row);
       });
     });
   },
 
-  deleteMovie(id, cb) {
+  deleteMovie(id) {
     return new Promise((resolve, reject) => {
       con.query(`DELETE FROM table_movie WHERE movid = ${id}`, (error, row) => {
         if (error) {
-          reject(error);
+          reject(logger.info(error));
         }
-        resolve(row, cb);
+        resolve(row);
       });
     });
   },
 
-  updateMovie(values, id, cb) {
+  updateMovie(values, id) {
     return new Promise((resolve, reject) => {
       con.query(`UPDATE table_movie SET ? WHERE movid = ${id}`, values, (error, row) => {
         if (error) {
-          reject(error);
+          reject(logger.info(error));
         }
-        resolve(row, cb);
+        resolve(row);
       });
     });
   },

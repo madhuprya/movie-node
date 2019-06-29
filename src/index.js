@@ -1,12 +1,11 @@
 const express = require('express');
 
-const winston = require('winston');
+// const winston = require('winston');
+// const expressWinston = require('express-winston');
+const bodyParser = require('body-parser');
 const logger = require('../src/utils/logging');
 
 const app = express();
-
-
-const bodyParser = require('body-parser');
 
 const movie = require('./routes/movie');
 const director = require('./routes/director');
@@ -19,13 +18,13 @@ app.use(bodyParser.json());
 // middleware
 
 app.use((req, res, next) => {
-  console.log(req.ip);
+  logger.info('Request ip', req.ip);
   next();
 });
 
-
 app.use('/movie', movie);
 app.use('/director', director);
+
 
 app.listen(3000, () => {
   logger.info('Server running at port 3000');
