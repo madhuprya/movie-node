@@ -5,14 +5,11 @@ const {
   format,
 } = require('express-winston');
 
+const winston = require('../utils/logging');
 
 module.exports = logger({
   transports: [
-    new transports.File({
-      maxsize: 5120000,
-      maxFiles: 5,
-      filename: `${__dirname}/../logs/applog.log`,
-    }),
+    winston.transports,
     new transports.Console(),
   ],
   format: format.combine(
@@ -28,11 +25,7 @@ module.exports = logger({
 
 module.exports = errorLogger({
   transports: [
-    new transports.File({
-      maxsize: 5120000,
-      maxFiles: 6,
-      filename: `${__dirname}/../logs/applog.log`,
-    }),
+    winston.transports,
     new transports.Console(),
   ],
   format: format.combine(
