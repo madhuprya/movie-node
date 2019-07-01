@@ -6,15 +6,14 @@ const bodyParser = require('body-parser');
 const logger = require('../src/utils/logging');
 
 const app = express();
-
-const movie = require('./routes/movie');
-const director = require('./routes/director');
+const seed = require('../src/scripts/seedData');
+//const movie = require('./routes/movie');
+//const director = require('./routes/director');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
 app.use(bodyParser.json());
-
 // middleware
 
 app.use((req, res, next) => {
@@ -22,8 +21,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/movie', movie);
-app.use('/director', director);
+//app.use('/movie', movie);
+//app.use('/director', director);
 
 
 app.listen(3000, () => {

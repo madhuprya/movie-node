@@ -1,10 +1,9 @@
-const mysql = require('mysql');
 
-const con = mysql.createConnection({
+const Sequelize = require('sequelize');
+
+const sequelize = new Sequelize('movies', 'root', 'root', {
   host: '172.17.0.2',
-  user: 'root',
-  password: 'root',
-  database: 'movie',
+  dialect: 'mysql',
+  operatorsAliases: false,
 });
-
-module.exports = con;
+module.exports = sequelize;

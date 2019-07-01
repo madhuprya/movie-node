@@ -2,7 +2,7 @@
 const express = require('express');
 
 const router = express.Router();
-const directorCrud = require('../models/director');
+const directorCrud = require('../models/Director');
 const joi = require('../middleware/joi');
 
 
