@@ -1,8 +1,6 @@
 const {
   errorLogger,
   logger,
-  transports,
-  format,
 } = require('express-winston');
 
 const winston = require('../utils/logging');
@@ -10,11 +8,11 @@ const winston = require('../utils/logging');
 module.exports = logger({
   transports: [
     winston.transports,
-    new transports.Console(),
+    winston.transports.Console(),
   ],
-  format: format.combine(
-    format.colorize(),
-    format.json(),
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.json(),
   ),
   meta: true,
   msg: 'HTTP {{req.method}} {{req.url}}',
@@ -26,10 +24,10 @@ module.exports = logger({
 module.exports = errorLogger({
   transports: [
     winston.transports,
-    new transports.Console(),
+    winston.transports.Console(),
   ],
-  format: format.combine(
-    format.colorize(),
-    format.json(),
+  format: winston.format.combine(
+    winston.format.colorize(),
+    winston.format.json(),
   ),
 });
