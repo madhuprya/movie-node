@@ -17,10 +17,10 @@ router.get('/error', (req, res, next) => next(new Error('This is an error and it
 // };
 // rest api to get director by id
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', (req, res) => {
   joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
-      directorCrud.getDirector(value.id)
+      directorCrud.findByPk(value.id)
         .then((resolve) => {
           res.json(resolve);
         })
@@ -36,7 +36,7 @@ router.get('/:id', (req, res, next) => {
 // rest api to get all director data
 
 router.get('/', (req, res) => {
-  directorCrud.getAllDirector()
+  directorCrud.findAll()
     .then((resolve) => {
       res.json(resolve);
     })
@@ -50,7 +50,7 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   joi.Joi.validate(req.body, joi.dschema, (err, value) => {
     if (!err) {
-      directorCrud.insertDirector(value)
+      directorCrud.create(value)
         .then((resolve) => {
           res.json(resolve);
         })
@@ -68,7 +68,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
   joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
-      directorCrud.deleteDirector(value.id)
+      directorCrud.destroy({ where: { id: value.id } })
         .then((resolve) => {
           res.json(resolve);
         })
@@ -84,12 +84,12 @@ router.delete('/:id', (req, res) => {
 
 // rest api to update record into mysql database
 
-router.put('/:id', (req, res, next) => {
+router.put('/:id', (req, res) => {
   joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
       joi.Joi.validate(req.body, joi.dschema, (error, data) => {
         if (!error) {
-          directorCrud.updateDirector(data, value.id)
+          directorCrud.update(data, { where: { id: value.id } })
             .then((resolve) => {
               res.json(resolve);
             })

@@ -32,7 +32,6 @@ sequelize.sync({
         },
       }).then((data) => {
         movie.directorId = data[0].id;
-        console.log(movie);
         Movie.create(movie);
       });
     });

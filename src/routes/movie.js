@@ -1,6 +1,6 @@
 const express = require('express');
 
-const movieCrud = require('../models/movie');
+const movieCrud = require('../models/Movie');
 
 const router = express.Router();
 
@@ -10,10 +10,10 @@ router.get('/error', (req, res, next) => next(new Error('This is an error and it
 
 
 // rest api to get movie by id
-router.get('/:id', (req, res, next) => {
-  joi.validate(req.params, joi.schema, (err, value) => {
+router.get('/:id', (req, res) => {
+  joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
-      movieCrud.getMovie(value.id)
+      movieCrud.findByPk(value.id)
         .then((resolve) => {
           res.json(resolve);
         })
@@ -29,7 +29,7 @@ router.get('/:id', (req, res, next) => {
 // rest api to get all movie data
 
 router.get('/', (req, res) => {
-  movieCrud.getAllMovie()
+  movieCrud.findAll()
     .then((resolve) => {
       res.json(resolve);
     })
@@ -41,9 +41,9 @@ router.get('/', (req, res) => {
 // rest api to create a new movie record into mysql database
 router.post('/', (req, res) => {
   // console.log(req.body)
-  joi.validate(req.body, joi.mschema, (err, value) => {
+  joi.Joi.validate(req.body, joi.mschema, (err, value) => {
     if (!err) {
-      movieCrud.insertMovie(value)
+      movieCrud.create(value)
         .then((resolve) => {
           res.json(resolve);
         })
@@ -58,9 +58,9 @@ router.post('/', (req, res) => {
 
 // rest api to delete record from mysql database
 router.delete('/:id', (req, res) => {
-  joi.validate(req.params, joi.schema, (err, value) => {
+  joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
-      movieCrud.deleteMovie(value.id)
+      movieCrud.destroy({ where: { id: value.id } })
         .then((resolve) => {
           res.json(resolve);
         })
@@ -76,11 +76,11 @@ router.delete('/:id', (req, res) => {
 // rest api to update record into mysql database
 
 router.put('/:id', (req, res) => {
-  joi.validate(req.params, joi.schema, (err, value) => {
+  joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
-      joi.validate(req.body, joi.mschema, (error, data) => {
+      joi.Joi.validate(req.body, joi.mschema, (error, data) => {
         if (!error) {
-          movieCrud.updateMovie(data, value.id)
+          movieCrud.update(data, { where: { id: value.id } })
             .then((resolve) => {
               res.json(resolve);
             })
