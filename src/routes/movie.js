@@ -1,16 +1,18 @@
 const express = require('express');
 
-const movieCrud = require('../models/Movie');
+const movieCrud = require('../models').Movie;
+const Director = require('../models').Director;
+
+const logger = require('../utils/logging');
+const errorHandler = require('../middleware/errorhandling');
 
 const router = express.Router();
 
 const joi = require('../middleware/joi');
-// middleware
-router.get('/error', (req, res, next) => next(new Error('This is an error and it should be logged to the console')));
 
 
 // rest api to get movie by id
-router.get('/:id', (req, res) => {
+router.get('/:id', (req, res, next) => {
   joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
       movieCrud.findByPk(value.id)
@@ -18,28 +20,28 @@ router.get('/:id', (req, res) => {
           res.json(resolve);
         })
         .catch((reject) => {
-          res.json(reject);
+          next(reject);
         });
     } else {
-      res.json(err);
+      res.json(err.details[0].message);
+      logger.info(err.details[0].message);
     }
   });
 });
 
 // rest api to get all movie data
 
-router.get('/', (req, res) => {
-  movieCrud.findAll()
-    .then((resolve) => {
-      res.json(resolve);
-    })
-    .catch((reject) => {
-      res.json(reject);
-    });
+router.get('/', async (req, res, next) => {
+  try {
+    const resp = await movieCrud.findAll({ include: [Director] });
+    res.json(resp);
+  } catch (error) {
+    next(error);
+  }
 });
 
 // rest api to create a new movie record into mysql database
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   // console.log(req.body)
   joi.Joi.validate(req.body, joi.mschema, (err, value) => {
     if (!err) {
@@ -48,16 +50,17 @@ router.post('/', (req, res) => {
           res.json(resolve);
         })
         .catch((reject) => {
-          res.json(reject);
+          next(reject);
         });
     } else {
-      res.json(err);
+      res.json(err.details[0].message);
+      logger.info(err.details[0].message);
     }
   });
 });
 
 // rest api to delete record from mysql database
-router.delete('/:id', (req, res) => {
+router.delete('/:id', (req, res, next) => {
   joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
       movieCrud.destroy({ where: { id: value.id } })
@@ -65,17 +68,18 @@ router.delete('/:id', (req, res) => {
           res.json(resolve);
         })
         .catch((reject) => {
-          res.json(reject);
+          next(reject);
         });
     } else {
-      res.json(err);
+      res.json(err.details[0].message);
+      logger.info(err.details[0].message);
     }
   });
 });
 
 // rest api to update record into mysql database
 
-router.put('/:id', (req, res) => {
+router.put('/:id', (req, res, next) => {
   joi.Joi.validate(req.params, joi.schema, (err, value) => {
     if (!err) {
       joi.Joi.validate(req.body, joi.mschema, (error, data) => {
@@ -85,16 +89,19 @@ router.put('/:id', (req, res) => {
               res.json(resolve);
             })
             .catch((reject) => {
-              res.json(reject);
+              next(reject);
             });
         } else {
-          res.json(err);
+          res.json(err.details[0].message);
+          logger.info(err.details[0].message);
         }
       });
     } else {
-      res.json(err);
+      res.send(err.details[0].message);
+      logger.info(err.details[0].message);
     }
   });
 });
 
+router.use(errorHandler.errorHandler);
 module.exports = router;

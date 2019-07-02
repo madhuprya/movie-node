@@ -307,3 +307,492 @@
 [2019-07-01T10:41:35.922Z] info Request ip
 [2019-07-01T10:41:48.101Z] info Request ip
 [2019-07-01T10:41:55.271Z] info Request ip
+[2019-07-01T11:50:29.332Z] info Server running at port 3000
+[2019-07-01T11:50:43.872Z] info Request ip
+[2019-07-01T11:52:09.058Z] info Request ip
+[2019-07-01T11:52:11.606Z] info Request ip
+[2019-07-01T11:52:13.984Z] info Request ip
+[2019-07-01T11:52:15.873Z] info Request ip
+[2019-07-01T11:54:04.030Z] info Server running at port 3000
+[2019-07-01T11:56:23.317Z] info Server running at port 3000
+[2019-07-01T11:56:43.440Z] info Request ip
+[2019-07-01T12:00:32.252Z] info Server running at port 3000
+[2019-07-01T12:00:36.455Z] info Request ip
+[2019-07-01T12:00:37.402Z] info Request ip
+[2019-07-01T12:04:17.633Z] info Server running at port 3000
+[2019-07-01T12:04:23.576Z] info Request ip
+[2019-07-01T12:05:20.400Z] info Server running at port 3000
+[2019-07-01T12:10:04.512Z] info Server running at port 3000
+[2019-07-01T12:21:41.472Z] info Server running at port 3000
+[2019-07-01T12:22:01.463Z] info Request ip
+[2019-07-01T12:22:08.381Z] info Request ip
+[2019-07-01T12:22:45.291Z] info Server running at port 3000
+[2019-07-01T12:23:11.008Z] info Server running at port 3000
+[2019-07-01T12:23:40.707Z] info Server running at port 3000
+[2019-07-01T12:23:44.956Z] info Request ip
+[2019-07-01T12:23:46.037Z] info Request ip
+[2019-07-01T12:23:46.911Z] info Request ip
+[2019-07-01T12:24:34.966Z] info Server running at port 3000
+[2019-07-01T12:24:41.940Z] info Request ip
+[2019-07-01T12:24:55.929Z] info Request ip
+[2019-07-01T12:26:35.911Z] info Server running at port 3000
+[2019-07-01T12:27:25.236Z] info Request ip
+[2019-07-01T12:27:32.295Z] info Request ip
+[2019-07-01T12:30:18.097Z] info Server running at port 3000
+[2019-07-01T12:30:35.808Z] info Server running at port 3000
+[2019-07-01T12:31:21.758Z] info Server running at port 3000
+[2019-07-01T12:31:30.553Z] info Request ip
+[2019-07-01T12:32:33.839Z] info Server running at port 3000
+[2019-07-01T12:32:46.662Z] info Server running at port 3000
+[2019-07-01T12:33:25.281Z] info Server running at port 3000
+[2019-07-01T12:33:31.480Z] info Request ip
+[2019-07-01T12:35:02.553Z] info Server running at port 3000
+[2019-07-01T12:41:22.968Z] info Server running at port 3000
+[2019-07-01T12:41:31.886Z] info Request ip
+[2019-07-01T12:41:59.178Z] info Server running at port 3000
+[2019-07-01T12:42:03.569Z] info Server running at port 3000
+[2019-07-01T12:42:04.424Z] info Server running at port 3000
+[2019-07-01T12:42:13.303Z] info Server running at port 3000
+[2019-07-01T12:42:19.213Z] info Request ip
+[2019-07-01T12:42:22.518Z] info Request ip
+[2019-07-01T13:08:34.463Z] info Server running at port 3000
+[2019-07-01T13:08:39.622Z] info Request ip
+[2019-07-01T13:09:09.429Z] info Server running at port 3000
+[2019-07-01T13:09:10.725Z] info Server running at port 3000
+[2019-07-01T13:09:15.006Z] info Server running at port 3000
+[2019-07-01T13:09:16.806Z] info Server running at port 3000
+[2019-07-01T13:09:28.284Z] info Server running at port 3000
+[2019-07-01T13:09:34.692Z] info Request ip
+[2019-07-01T13:10:03.414Z] info Server running at port 3000
+[2019-07-01T13:10:04.800Z] info Server running at port 3000
+[2019-07-01T13:10:09.505Z] info Server running at port 3000
+[2019-07-01T13:10:18.741Z] info Server running at port 3000
+[2019-07-01T13:10:38.491Z] info Server running at port 3000
+[2019-07-01T13:10:44.299Z] info Server running at port 3000
+[2019-07-01T13:11:11.210Z] info Server running at port 3000
+[2019-07-01T13:11:12.388Z] info Server running at port 3000
+[2019-07-01T13:11:23.623Z] info Request ip
+[2019-07-01T13:11:39.846Z] info Server running at port 3000
+[2019-07-01T13:11:53.272Z] info Request ip
+[2019-07-01T13:13:07.912Z] info Request ip
+[2019-07-02T07:06:29.282Z] info Server running at port 3000
+[2019-07-02T07:06:57.428Z] info SequelizeHostNotReachableError: connect EHOSTUNREACH 172.17.0.2:3306
+    at Promise.tap.then.catch.err (/home/madhu/Documents/training-proj/project/movies/node_modules/sequelize/lib/dialects/mysql/connection-manager.js:129:19)
+    at tryCatcher (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/promise.js:517:31)
+    at Promise._settlePromise (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/promise.js:574:18)
+    at Promise._settlePromise0 (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/promise.js:619:10)
+    at Promise._settlePromises (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/promise.js:695:18)
+    at _drainQueueStep (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/async.js:138:12)
+    at _drainQueue (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/async.js:131:9)
+    at Async._drainQueues (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/async.js:147:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/home/madhu/Documents/training-proj/project/movies/node_modules/bluebird/js/release/async.js:17:14)
+    at runCallback (timers.js:705:18)
+    at tryOnImmediate (timers.js:676:5)
+    at processImmediate (timers.js:658:5)
+[2019-07-02T07:13:26.386Z] info db not connected
+[2019-07-02T07:15:18.023Z] info Server running at port 3000
+[2019-07-02T07:15:28.883Z] info Request ip
+[2019-07-02T07:16:08.754Z] info Server running at port 3000
+[2019-07-02T07:16:16.560Z] info Server running at port 3000
+[2019-07-02T07:17:30.772Z] info Server running at port 3000
+[2019-07-02T07:17:35.128Z] info Server running at port 3000
+[2019-07-02T07:17:42.878Z] info Request ip
+[2019-07-02T07:18:33.392Z] info Server running at port 3000
+[2019-07-02T07:18:35.104Z] info Server running at port 3000
+[2019-07-02T07:18:36.537Z] info Server running at port 3000
+[2019-07-02T07:18:52.143Z] info Server running at port 3000
+[2019-07-02T07:18:56.701Z] info Request ip
+[2019-07-02T07:18:59.824Z] info connect EHOSTUNREACH 172.17.0.2:3306
+[2019-07-02T07:19:37.610Z] info Server running at port 3000
+[2019-07-02T07:19:40.910Z] info Server running at port 3000
+[2019-07-02T07:19:48.937Z] info Server running at port 3000
+[2019-07-02T07:20:07.512Z] info Server running at port 3000
+[2019-07-02T07:20:20.503Z] info Server running at port 3000
+[2019-07-02T07:20:22.067Z] info Server running at port 3000
+[2019-07-02T07:20:28.864Z] info Request ip
+[2019-07-02T07:20:28.882Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:21:08.654Z] info Server running at port 3000
+[2019-07-02T07:21:13.985Z] info Server running at port 3000
+[2019-07-02T07:21:29.916Z] info Server running at port 3000
+[2019-07-02T07:21:36.055Z] info Request ip
+[2019-07-02T07:21:36.075Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:03.532Z] info Server running at port 3000
+[2019-07-02T07:22:04.759Z] info Request ip
+[2019-07-02T07:22:04.777Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:08.243Z] info Request ip
+[2019-07-02T07:22:08.247Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:15.411Z] info Server running at port 3000
+[2019-07-02T07:22:16.826Z] info Request ip
+[2019-07-02T07:22:16.841Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:18.486Z] info Request ip
+[2019-07-02T07:22:18.488Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:22.598Z] info Server running at port 3000
+[2019-07-02T07:22:24.309Z] info Request ip
+[2019-07-02T07:22:24.333Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:40.580Z] info Server running at port 3000
+[2019-07-02T07:22:48.230Z] info Server running at port 3000
+[2019-07-02T07:22:51.175Z] info Request ip
+[2019-07-02T07:22:51.191Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:52.238Z] info Request ip
+[2019-07-02T07:22:52.240Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:22:57.523Z] info Server running at port 3000
+[2019-07-02T07:22:59.646Z] info Request ip
+[2019-07-02T07:22:59.666Z] info child "id" fails because ["id" must be less than or equal to 50]
+[2019-07-02T07:23:29.826Z] info Server running at port 3000
+[2019-07-02T07:23:44.303Z] info Server running at port 3000
+[2019-07-02T07:23:47.734Z] info Server running at port 3000
+[2019-07-02T07:23:49.866Z] info Server running at port 3000
+[2019-07-02T07:24:15.877Z] info Server running at port 3000
+[2019-07-02T07:24:19.613Z] info Server running at port 3000
+[2019-07-02T07:24:22.669Z] info Server running at port 3000
+[2019-07-02T07:24:26.963Z] info Server running at port 3000
+[2019-07-02T07:24:40.287Z] info Server running at port 3000
+[2019-07-02T07:24:50.501Z] info Server running at port 3000
+[2019-07-02T07:25:11.309Z] info Request ip
+[2019-07-02T07:25:11.335Z] info "id" must be less than or equal to 50
+[2019-07-02T07:25:45.253Z] info Server running at port 3000
+[2019-07-02T07:26:11.511Z] info Server running at port 3000
+[2019-07-02T07:26:17.209Z] info Server running at port 3000
+[2019-07-02T07:26:21.284Z] info Server running at port 3000
+[2019-07-02T07:26:28.221Z] info Server running at port 3000
+[2019-07-02T07:26:37.325Z] info Server running at port 3000
+[2019-07-02T07:26:49.044Z] info Server running at port 3000
+[2019-07-02T07:26:50.139Z] info Server running at port 3000
+[2019-07-02T07:26:51.990Z] info Server running at port 3000
+[2019-07-02T07:27:00.739Z] info Server running at port 3000
+[2019-07-02T07:27:13.773Z] info Server running at port 3000
+[2019-07-02T07:27:24.053Z] info Server running at port 3000
+[2019-07-02T07:27:26.229Z] info Server running at port 3000
+[2019-07-02T07:27:28.068Z] info Server running at port 3000
+[2019-07-02T07:27:31.409Z] info Server running at port 3000
+[2019-07-02T07:27:32.765Z] info Server running at port 3000
+[2019-07-02T07:27:37.166Z] info Server running at port 3000
+[2019-07-02T07:27:40.930Z] info Server running at port 3000
+[2019-07-02T07:27:52.546Z] info Server running at port 3000
+[2019-07-02T07:27:56.617Z] info Server running at port 3000
+[2019-07-02T07:28:17.576Z] info Server running at port 3000
+[2019-07-02T07:28:21.563Z] info Server running at port 3000
+[2019-07-02T07:28:26.462Z] info Server running at port 3000
+[2019-07-02T07:28:31.289Z] info Server running at port 3000
+[2019-07-02T07:28:40.758Z] info Server running at port 3000
+[2019-07-02T07:28:55.051Z] info Request ip :
+[2019-07-02T07:32:10.109Z] info Server running at port 3000
+[2019-07-02T07:32:15.034Z] info Request ip :
+[2019-07-02T07:34:05.900Z] info Server running at port 3000
+[2019-07-02T07:34:10.876Z] info Request ip :
+[2019-07-02T07:34:47.651Z] info Server running at port 3000
+[2019-07-02T07:34:50.834Z] info Request ip :
+[2019-07-02T07:35:07.037Z] info Server running at port 3000
+[2019-07-02T07:35:09.354Z] info Request ip :
+[2019-07-02T07:35:22.236Z] info Server running at port 3000
+[2019-07-02T07:35:23.409Z] info Server running at port 3000
+[2019-07-02T07:35:25.212Z] info Request ip : ?
+[2019-07-02T07:35:31.999Z] info Server running at port 3000
+[2019-07-02T07:35:41.384Z] info Server running at port 3000
+[2019-07-02T07:35:47.008Z] info Server running at port 3000
+[2019-07-02T07:35:49.907Z] info Server running at port 3000
+[2019-07-02T07:36:23.320Z] info Server running at port 3000
+[2019-07-02T07:36:25.222Z] info Server running at port 3000
+[2019-07-02T07:36:29.788Z] info Server running at port 3000
+[2019-07-02T07:36:33.553Z] info Request ip : ::1
+[2019-07-02T07:44:49.781Z] info Request ip : ::1
+[2019-07-02T07:46:20.559Z] info Server running at port 3000
+[2019-07-02T07:46:21.863Z] info Server running at port 3000
+[2019-07-02T07:46:25.603Z] info Request ip : ::1
+[2019-07-02T07:47:38.362Z] info Server running at port 3000
+[2019-07-02T07:47:39.409Z] info Request ip : ::1
+[2019-07-02T07:50:53.993Z] info Server running at port 3000
+[2019-07-02T07:51:02.841Z] info Request ip : ::1
+[2019-07-02T07:51:25.624Z] info Server running at port 3000
+[2019-07-02T07:51:28.784Z] info Request ip : ::1
+[2019-07-02T07:51:41.294Z] info Server running at port 3000
+[2019-07-02T07:51:43.028Z] info Request ip : ::1
+[2019-07-02T07:52:22.918Z] info Server running at port 3000
+[2019-07-02T07:52:26.936Z] info Server running at port 3000
+[2019-07-02T07:52:40.549Z] info Server running at port 3000
+[2019-07-02T07:52:42.808Z] info Request ip : ::1
+[2019-07-02T07:52:52.710Z] info Server running at port 3000
+[2019-07-02T07:52:57.682Z] info Server running at port 3000
+[2019-07-02T07:53:03.317Z] info Server running at port 3000
+[2019-07-02T07:53:07.569Z] info Server running at port 3000
+[2019-07-02T07:53:09.628Z] info Request ip : ::1
+[2019-07-02T07:53:40.733Z] info Server running at port 3000
+[2019-07-02T07:53:42.110Z] info Server running at port 3000
+[2019-07-02T07:53:45.679Z] info Server running at port 3000
+[2019-07-02T07:53:49.119Z] info Request ip : ::1
+[2019-07-02T07:53:52.265Z] info SequelizeHostNotReachableError
+[2019-07-02T07:53:52.270Z] info Cannot set headers after they are sent to the client
+[2019-07-02T07:56:54.017Z] info Server running at port 3000
+[2019-07-02T07:59:27.442Z] info Server running at port 3000
+[2019-07-02T07:59:30.663Z] info Server running at port 3000
+[2019-07-02T07:59:35.650Z] info Request ip : ::1
+[2019-07-02T07:59:38.784Z] info connect EHOSTUNREACH 172.17.0.2:3306
+[2019-07-02T07:59:38.788Z] info Cannot set headers after they are sent to the client
+[2019-07-02T08:00:17.881Z] info Server running at port 3000
+[2019-07-02T08:00:19.124Z] info Server running at port 3000
+[2019-07-02T08:00:23.683Z] info Request ip : ::1
+[2019-07-02T08:00:26.801Z] info connect EHOSTUNREACH 172.17.0.2:3306
+[2019-07-02T08:00:58.950Z] info Server running at port 3000
+[2019-07-02T08:01:03.219Z] info Request ip : ::1
+[2019-07-02T08:01:44.705Z] info Server running at port 3000
+[2019-07-02T08:07:58.628Z] info Server running at port 3000
+[2019-07-02T08:08:09.298Z] info Server running at port 3000
+[2019-07-02T08:08:12.291Z] info Server running at port 3000
+[2019-07-02T08:08:17.963Z] info Server running at port 3000
+[2019-07-02T08:09:25.453Z] info Server running at port 3000
+[2019-07-02T08:09:49.158Z] info Server running at port 3000
+[2019-07-02T08:09:54.586Z] info Server running at port 3000
+[2019-07-02T08:10:50.341Z] info Server running at port 3000
+[2019-07-02T08:10:53.048Z] info Server running at port 3000
+[2019-07-02T08:10:58.961Z] info Server running at port 3000
+[2019-07-02T08:11:00.937Z] info Server running at port 3000
+[2019-07-02T08:11:03.157Z] info Server running at port 3000
+[2019-07-02T08:11:08.797Z] info Server running at port 3000
+[2019-07-02T08:11:48.706Z] info Server running at port 3000
+[2019-07-02T08:11:59.441Z] info Server running at port 3000
+[2019-07-02T08:12:08.294Z] info Request ip : ::1
+[2019-07-02T08:12:21.747Z] info Request ip : ::1
+[2019-07-02T08:13:01.062Z] info Server running at port 3000
+[2019-07-02T08:13:02.770Z] info Request ip : ::1
+[2019-07-02T08:15:01.013Z] info Server running at port 3000
+[2019-07-02T08:15:17.292Z] info Server running at port 3000
+[2019-07-02T08:15:20.008Z] info Request ip : ::1
+[2019-07-02T08:17:45.002Z] info Request ip : ::1
+[2019-07-02T08:18:54.420Z] info Server running at port 3000
+[2019-07-02T08:18:58.639Z] info Server running at port 3000
+[2019-07-02T08:19:05.702Z] info Server running at port 3000
+[2019-07-02T08:19:19.642Z] info Request ip : ::1
+[2019-07-02T08:19:39.257Z] info Request ip : ::1
+[2019-07-02T08:19:39.258Z] info function header(name) {
+  if (!name) {
+    throw new TypeError('name argument is required to req.get');
+  }
+
+  if (typeof name !== 'string') {
+    throw new TypeError('name must be a string to req.get');
+  }
+
+  var lc = name.toLowerCase();
+
+  switch (lc) {
+    case 'referer':
+    case 'referrer':
+      return this.headers.referrer
+        || this.headers.referer;
+    default:
+      return this.headers[lc];
+  }
+}
+[2019-07-02T08:19:39.259Z] info directorCrud.destroy is not a function
+[2019-07-02T08:19:51.531Z] info Request ip : ::1
+[2019-07-02T08:19:55.893Z] info Request ip : ::1
+[2019-07-02T08:19:55.896Z] info function header(name) {
+  if (!name) {
+    throw new TypeError('name argument is required to req.get');
+  }
+
+  if (typeof name !== 'string') {
+    throw new TypeError('name must be a string to req.get');
+  }
+
+  var lc = name.toLowerCase();
+
+  switch (lc) {
+    case 'referer':
+    case 'referrer':
+      return this.headers.referrer
+        || this.headers.referer;
+    default:
+      return this.headers[lc];
+  }
+}
+[2019-07-02T08:19:55.898Z] info directorCrud.destroy is not a function
+[2019-07-02T08:21:30.769Z] info Server running at port 3000
+[2019-07-02T08:21:32.491Z] info Request ip : ::1
+[2019-07-02T08:21:32.498Z] info name must be a string to req.get
+[2019-07-02T08:21:34.288Z] info Request ip : ::1
+[2019-07-02T08:21:34.293Z] info name must be a string to req.get
+[2019-07-02T08:21:56.699Z] info Server running at port 3000
+[2019-07-02T08:22:00.024Z] info Request ip : ::1
+[2019-07-02T08:22:00.033Z] info undefined
+[2019-07-02T08:22:00.034Z] info directorCrud.destroy is not a function
+[2019-07-02T08:22:08.517Z] info Server running at port 3000
+[2019-07-02T08:22:10.353Z] info Request ip : ::1
+[2019-07-02T08:22:10.362Z] info directorCrud.destroy is not a function
+[2019-07-02T08:22:20.403Z] info Request ip : ::1
+[2019-07-02T08:22:20.406Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:22:26.101Z] info Request ip : ::1
+[2019-07-02T08:22:35.512Z] info Request ip : ::1
+[2019-07-02T08:22:39.492Z] info Request ip : ::1
+[2019-07-02T08:22:42.228Z] info Request ip : ::1
+[2019-07-02T08:22:50.091Z] info Request ip : ::1
+[2019-07-02T08:22:55.540Z] info Request ip : ::1
+[2019-07-02T08:22:55.541Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:23:10.021Z] info Server running at port 3000
+[2019-07-02T08:23:12.133Z] info Request ip : ::1
+[2019-07-02T08:23:20.315Z] info Request ip : ::1
+[2019-07-02T08:23:35.403Z] info Server running at port 3000
+[2019-07-02T08:23:48.826Z] info Server running at port 3000
+[2019-07-02T08:23:54.398Z] info Server running at port 3000
+[2019-07-02T08:23:56.533Z] info Request ip : ::1
+[2019-07-02T08:23:56.540Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:23:58.295Z] info Request ip : ::1
+[2019-07-02T08:23:58.296Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:24:20.212Z] info Server running at port 3000
+[2019-07-02T08:24:22.390Z] info Request ip : ::1
+[2019-07-02T08:24:22.404Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:25:15.532Z] info Server running at port 3000
+[2019-07-02T08:25:21.707Z] info Server running at port 3000
+[2019-07-02T08:25:30.757Z] info Server running at port 3000
+[2019-07-02T08:25:31.781Z] info Server running at port 3000
+[2019-07-02T08:25:33.412Z] info Request ip : ::1
+[2019-07-02T08:25:33.421Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:25:34.348Z] info Request ip : ::1
+[2019-07-02T08:25:34.348Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:25:40.322Z] info Server running at port 3000
+[2019-07-02T08:26:00.954Z] info Server running at port 3000
+[2019-07-02T08:26:02.772Z] info Server running at port 3000
+[2019-07-02T08:26:05.854Z] info Server running at port 3000
+[2019-07-02T08:26:06.930Z] info Server running at port 3000
+[2019-07-02T08:26:08.030Z] info Server running at port 3000
+[2019-07-02T08:26:13.987Z] info Server running at port 3000
+[2019-07-02T08:26:25.160Z] info Server running at port 3000
+[2019-07-02T08:26:33.123Z] info Server running at port 3000
+[2019-07-02T08:26:34.231Z] info Server running at port 3000
+[2019-07-02T08:26:38.806Z] info Server running at port 3000
+[2019-07-02T08:26:52.310Z] info Request ip : ::1
+[2019-07-02T08:27:15.029Z] info Server running at port 3000
+[2019-07-02T08:27:18.134Z] info Server running at port 3000
+[2019-07-02T08:27:25.617Z] info Server running at port 3000
+[2019-07-02T08:27:30.554Z] info Server running at port 3000
+[2019-07-02T08:27:34.035Z] info Server running at port 3000
+[2019-07-02T08:27:37.748Z] info Request ip : ::1
+[2019-07-02T08:27:37.757Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:27:40.890Z] info Request ip : ::1
+[2019-07-02T08:27:40.893Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:28:42.236Z] info Request ip : ::1
+[2019-07-02T08:28:45.474Z] info Request ip : ::1
+[2019-07-02T08:28:45.475Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:29:23.714Z] info Server running at port 3000
+[2019-07-02T08:29:26.384Z] info Request ip : ::1
+[2019-07-02T08:29:31.292Z] info Request ip : ::1
+[2019-07-02T08:29:32.382Z] info Request ip : ::1
+[2019-07-02T08:29:39.089Z] info Request ip : ::1
+[2019-07-02T08:29:49.960Z] info Server running at port 3000
+[2019-07-02T08:29:51.463Z] info Request ip : ::1
+[2019-07-02T08:29:51.470Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:29:54.872Z] info Request ip : ::1
+[2019-07-02T08:29:59.011Z] info Request ip : ::1
+[2019-07-02T08:30:18.976Z] info Server running at port 3000
+[2019-07-02T08:30:20.493Z] info Server running at port 3000
+[2019-07-02T08:30:22.698Z] info Request ip : ::1
+[2019-07-02T08:30:27.386Z] info Request ip : ::1
+[2019-07-02T08:30:27.387Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:30:33.460Z] info Server running at port 3000
+[2019-07-02T08:30:39.728Z] info Server running at port 3000
+[2019-07-02T08:31:14.317Z] info Server running at port 3000
+[2019-07-02T08:31:21.611Z] info Request ip : ::1
+[2019-07-02T08:31:21.620Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:31:38.975Z] info Server running at port 3000
+[2019-07-02T08:32:24.259Z] info Server running at port 3000
+[2019-07-02T08:32:29.266Z] info Server running at port 3000
+[2019-07-02T08:32:33.840Z] info Server running at port 3000
+[2019-07-02T08:32:43.397Z] info Server running at port 3000
+[2019-07-02T08:32:48.192Z] info Server running at port 3000
+[2019-07-02T08:32:52.860Z] info Request ip : ::1
+[2019-07-02T08:32:52.876Z] info directorCrud.findByPk is not a function
+[2019-07-02T08:32:56.554Z] info Request ip : ::1
+[2019-07-02T08:32:56.557Z] info directorCrud.destroy is not a function
+[2019-07-02T08:33:05.054Z] info Request ip : ::1
+[2019-07-02T08:33:05.054Z] info directorCrud.destroy is not a function
+[2019-07-02T08:33:12.504Z] info Request ip : ::1
+[2019-07-02T08:33:12.510Z] info directorCrud.destroy is not a function
+[2019-07-02T08:35:38.389Z] info Server running at port 3000
+[2019-07-02T08:35:40.941Z] info Server running at port 3000
+[2019-07-02T08:35:44.382Z] info Request ip : ::1
+[2019-07-02T08:35:50.655Z] info Request ip : ::1
+[2019-07-02T08:35:55.644Z] info Request ip : ::1
+[2019-07-02T08:36:03.056Z] info Request ip : ::1
+[2019-07-02T08:37:36.779Z] info Server running at port 3000
+[2019-07-02T08:37:40.700Z] info Request ip : ::1
+[2019-07-02T08:37:50.777Z] info connect ETIMEDOUT
+[2019-07-02T08:38:38.742Z] info Server running at port 3000
+[2019-07-02T08:38:42.157Z] info Request ip : ::1
+[2019-07-02T08:38:45.276Z] info connect EHOSTUNREACH 172.17.0.2:3306
+[2019-07-02T08:39:09.690Z] info Server running at port 3000
+[2019-07-02T08:39:11.242Z] info Server running at port 3000
+[2019-07-02T08:39:11.458Z] info Request ip : ::1
+[2019-07-02T08:39:14.576Z] info connect EHOSTUNREACH 172.17.0.2:3306
+[2019-07-02T08:39:24.954Z] info Server running at port 3000
+[2019-07-02T08:39:49.956Z] info Server running at port 3000
+[2019-07-02T08:39:50.710Z] info Request ip : ::1
+[2019-07-02T08:40:00.340Z] info Server running at port 3000
+[2019-07-02T08:40:06.174Z] info Request ip : ::1
+[2019-07-02T08:40:09.306Z] info connect EHOSTUNREACH 172.17.0.2:3306
+[2019-07-02T08:40:39.675Z] info Server running at port 3000
+[2019-07-02T08:40:42.131Z] info Request ip : ::1
+[2019-07-02T08:40:45.233Z] info SequelizeHostNotReachableError
+[2019-07-02T08:43:25.246Z] info Server running at port 3000
+[2019-07-02T08:43:31.949Z] info Server running at port 3000
+[2019-07-02T08:43:35.332Z] info Server running at port 3000
+[2019-07-02T08:43:40.758Z] info Server running at port 3000
+[2019-07-02T08:43:46.504Z] info Request ip : ::1
+[2019-07-02T08:43:46.516Z] info GET
+[2019-07-02T08:43:49.629Z] info SequelizeHostNotReachableError
+[2019-07-02T08:44:33.164Z] info Server running at port 3000
+[2019-07-02T08:44:35.028Z] info Request ip : ::1
+[2019-07-02T08:44:35.039Z] info /5
+[2019-07-02T08:44:38.173Z] info SequelizeHostNotReachableError
+[2019-07-02T08:45:07.516Z] info Server running at port 3000
+[2019-07-02T08:45:10.720Z] info Server running at port 3000
+[2019-07-02T08:45:12.314Z] info Server running at port 3000
+[2019-07-02T08:45:31.327Z] info Server running at port 3000
+[2019-07-02T08:45:33.456Z] info Request ip : ::1
+[2019-07-02T08:45:33.474Z] info GET
+[2019-07-02T08:45:36.609Z] info SequelizeHostNotReachableError
+[2019-07-02T08:45:43.922Z] info Request ip : ::1
+[2019-07-02T08:45:43.925Z] info GET
+[2019-07-02T08:45:46.987Z] info SequelizeHostNotReachableError
+[2019-07-02T08:46:51.450Z] info Server running at port 3000
+[2019-07-02T09:36:24.426Z] info Server running at port 3000
+[2019-07-02T09:36:29.801Z] info Server running at port 3000
+[2019-07-02T09:36:36.643Z] info Server running at port 3000
+[2019-07-02T09:36:42.165Z] info Server running at port 3000
+[2019-07-02T09:36:44.748Z] info Server running at port 3000
+[2019-07-02T09:36:51.327Z] info Server running at port 3000
+[2019-07-02T09:37:10.562Z] info Server running at port 3000
+[2019-07-02T09:37:21.490Z] info Server running at port 3000
+[2019-07-02T09:37:34.125Z] info Request ip : ::1
+[2019-07-02T09:37:37.248Z] info SequelizeHostNotReachableError
+[2019-07-02T09:50:15.626Z] info Server running at port 3000
+[2019-07-02T09:50:44.703Z] info Server running at port 3000
+[2019-07-02T09:50:50.651Z] info Server running at port 3000
+[2019-07-02T09:51:10.842Z] info Server running at port 3000
+[2019-07-02T09:51:19.442Z] info Server running at port 3000
+[2019-07-02T09:51:23.070Z] info Server running at port 3000
+[2019-07-02T09:51:47.707Z] info Server running at port 3000
+[2019-07-02T09:51:50.545Z] info Server running at port 3000
+[2019-07-02T09:52:28.670Z] info Server running at port 3000
+[2019-07-02T09:52:33.846Z] info Server running at port 3000
+[2019-07-02T09:52:44.316Z] info Request ip : ::1
+[2019-07-02T09:53:03.437Z] info Server running at port 3000
+[2019-07-02T09:53:07.335Z] info Server running at port 3000
+[2019-07-02T09:53:16.214Z] info Server running at port 3000
+[2019-07-02T09:53:19.143Z] info Server running at port 3000
+[2019-07-02T09:53:23.005Z] info Request ip : ::1
+[2019-07-02T09:53:26.140Z] info SequelizeHostNotReachableError
+[2019-07-02T09:54:08.878Z] info Server running at port 3000
+[2019-07-02T09:54:14.797Z] info Server running at port 3000
+[2019-07-02T09:54:16.293Z] info Server running at port 3000
+[2019-07-02T09:54:36.923Z] info Server running at port 3000
+[2019-07-02T09:54:45.048Z] info Server running at port 3000
+[2019-07-02T09:54:46.625Z] info Request ip : ::1
+[2019-07-02T09:54:49.713Z] info SequelizeHostNotReachableError
+[2019-07-02T09:54:54.864Z] info Server running at port 3000
+[2019-07-02T09:54:57.911Z] info Request ip : ::1
+[2019-07-02T09:55:01.001Z] info SequelizeHostNotReachableError
+[2019-07-02T09:55:16.548Z] info Server running at port 3000
+[2019-07-02T09:55:17.888Z] info Request ip : ::1
+[2019-07-02T09:55:21.009Z] info SequelizeHostNotReachableError
+[2019-07-02T09:55:52.813Z] info Server running at port 3000

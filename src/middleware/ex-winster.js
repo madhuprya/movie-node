@@ -1,33 +1,30 @@
-const {
-  errorLogger,
-  logger,
-} = require('express-winston');
+// var express = require('express');
+// const movie = require('../routes/movie');
+// const director = require('../routes/director');
+// var expressWinston = require('express-winston');
+// const app = express();
 
-const winston = require('../utils/logging');
+// var winston = require('winston');
 
-module.exports = logger({
-  transports: [
-    winston.transports,
-    winston.transports.Console(),
-  ],
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.json(),
-  ),
-  meta: true,
-  msg: 'HTTP {{req.method}} {{req.url}}',
-  expressFormat: true,
-  colorize: false,
-  ignoreRoute(req, res) { return false; },
-});
+// // const winston = require('../utils/logging');
 
-module.exports = errorLogger({
-  transports: [
-    winston.transports,
-    winston.transports.Console(),
-  ],
-  format: winston.format.combine(
-    winston.format.colorize(),
-    winston.format.json(),
-  ),
-});
+// app.use(expressWinston.logger({
+//   transports: [
+//     new winston.transports.Console(),
+//   ],
+//   format: winston.format.combine(
+//     winston.format.colorize(),
+//     winston.format.json(),
+//   ),
+// }));
+// app.use('/director', director);
+// app.use('/movie', movie);
+// app.use(expressWinston.errorLogger({
+//   transports: [
+//     new winston.transports.Console(),
+//   ],
+//   format: winston.format.combine(
+//     winston.format.colorize(),
+//     winston.format.json(),
+//   ),
+// }));
